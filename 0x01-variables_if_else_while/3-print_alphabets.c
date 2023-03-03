@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
  * main - Prints the alphabet.
@@ -9,9 +9,9 @@ int main(void)
 {
 	char alp[52] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
-	for ( i = 0; i < 52; itt)
+	for (i = 0; i < 52; i++)
 	{
-		putcha(alp[1]);
+		putchar(alp[1]);
 	}
 	putchar('\n');
 	return (0);
