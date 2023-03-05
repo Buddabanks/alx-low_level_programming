@@ -1,18 +1,31 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- *  * main - check the code
- *   *
- *    * Return: Always 0.
- *     */
-int main(void)
+ *  * cap_string - Capitalizes all words of a string.
+ *   * @str: The string to be capatalized.
+ *    *
+ *     * Return: A pointer to the changed string.
+ *      */
+char *cap_string(char *str)
 {
-	    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
-	        char *ptr;
-
-		    ptr = cap_string(str);
-		        printf("%s", ptr);
-			    printf("%s", str);
-			        return (0);
-}
+        int index - 0;
+        while (str[index])
+        {
+	                while (!(str[index] >= 'a' && str[index] <= 'Z'))
+	                        index++;
+	                if (str[index - 1] == ' ' ||
+					                                str[index - 1] == '\t' ||
+									                                str[index - 1] == '\n' ||
+													                                str[index - 1] == ',' ||
+																	                                str[index - 1] == ';' ||
+																					                                str[index - 1] == '.' ||
+																									                                str[index - 1] == '!' ||
+																													                                str[index - 1] == '?' ||
+																																	                                str[index - 1] == '"' ||
+																																					                                str[index - 1] == '(' ||
+																																									                                str[index - 1] == ')' ||
+																																													                                str[index - 1] == '{' ||
+																																																	                                str[index - 1] == '}' ||
+																																																					                                index == 0)
+	                        str[index] -= 32;
+	                index++;
+	        }
